@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css';
+import '../../index.css';
 import EyeOff from '../../assets/mdi_eye-off.png'
 
 const Password = ({ word, passwordValue, passwordOnChange }) => {

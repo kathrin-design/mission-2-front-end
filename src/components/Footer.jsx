@@ -51,16 +51,24 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-100 px-5 pt-2 pb-5 d-flex justify-content-between align-items-center border-top">
-        <p className="my-auto align-items-center text-secondary DM_Sans fw-medium">
+      <div className="w-100 px-5 pt-2 pb-4 d-flex flex-column flex-sm-row justify-content-between align-items-center border-top">
+        <div className="d-flex flex-row">
+          <a href="#">
+            <img className="me-2" src={linkedInIcon} />
+          </a>
+          <a href="#">
+            <img className="mx-2" src={facebookIcon} />
+          </a>
+          <a href="#">
+            <img className="mx-2" src={instagramIcon} />
+          </a>
+          <a href="#">
+            <img className="ms-2" src={twitterIcon} />
+          </a>
+        </div>
+        <p className="my-auto align-items-center text-secondary DM_Sans fw-medium pt-2">
           @2023 Gerobak Sayur All Rights Reserved.
         </p>
-        <div className="d-flex flex-row">
-          <img className="me-2" src={linkedInIcon} />
-          <img className="mx-2" src={facebookIcon} />
-          <img className="mx-2" src={instagramIcon} />
-          <img className="ms-2" src={twitterIcon} />
-        </div>
       </div>
     </div>
   );

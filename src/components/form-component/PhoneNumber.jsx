@@ -1,6 +1,7 @@
 import React from 'react';
 import IdnFlag from '../../assets/idn-flag.png';
 import ArrowDown from '../../assets/arrow-down.png';
+import '../../index.css';
 
 const PhoneNumber = () => {
     return (

@@ -6,7 +6,7 @@ import loginStore from "../../stores/useLoginStore";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { userName, logout } = loginStore();
+  const { userName, isLoggedIn, logout } = loginStore();
 
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
@@ -80,7 +80,10 @@ const Header = () => {
               onClick={toggleCategoryDropdown}
               ref={categoryDropdownRef}
             >
-              <a href="#" className="nav-link DM_Sans text-secondary fw-medium">
+              <a
+                href="#"
+                className="nav-link DM_Sans text-secondary fw-medium d-flex flex-row"
+              >
                 Category
                 <span className="ms-sm-1">
                   <i className="fa-solid fa-chevron-down"></i>
@@ -136,7 +139,7 @@ const Header = () => {
           </ul>
         </div>
 
-        {userName ? (
+        {isLoggedIn ? (
           <div
             className="profile-dropdown position-relative ms-auto me-sm-2"
             ref={profileDropdownRef}

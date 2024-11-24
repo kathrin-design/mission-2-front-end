@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header/Header";
-import Title from "../components/form/Title";
-import Subtitle from "../components/form/SubTitle";
-import BtnGoogle from "../components/form/BtnGoogle";
-import "../components/styles.css";
+import Title from "../components/form-component/Title";
+import Subtitle from "../components/form-component/SubTitle";
+import BtnGoogle from "../components/form-component/BtnGoogle";
+import "../index.css";
 import EyeOff from "../assets/mdi_eye-off.png";
 import loginStore from "../stores/useLoginStore";
 
@@ -80,7 +80,7 @@ const Login = () => {
     <>
       <Header />
       <div className="template d-flex justify-content-center align-items-center align-self-center">
-        <div className="form_container p-4 my-4 bg-white border rounded">
+        <div className="form_container p-4 my-4 bg-white border rounded w-75">
           <Title title="Masuk ke Akun" />
           <Subtitle subtitle="Yuk, lanjutin belajarmu di videobelajar" />
           <form
@@ -184,10 +184,16 @@ const Login = () => {
 
             <p className="text-center text-secondary my-2">atau</p>
             <BtnGoogle className="btn-google" keyword="Masuk dengan Google" />
+            <ToastContainer
+              position="bottom-center"
+              autoClose={3000}
+              limit={1}
+              closeButton={false}
+              toastClassName="custom-toast"
+            />
           </form>
         </div>
       </div>
-      <ToastContainer />
     </>
   );
 };

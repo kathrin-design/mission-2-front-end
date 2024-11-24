@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css';
+import '../../index.css';
 import GoogleIcon from '../../assets/google-icon.png';
 
 const BtnGoogle = ({ className, keyword }) => {

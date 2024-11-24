@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import registerStore from "../stores/useRegisterStore";
 import Header from "../components/Header/Header";
-import Title from "../components/form/Title";
-import Subtitle from "../components/form/SubTitle";
-import BtnGoogle from "../components/form/BtnGoogle";
-import "../components/styles.css";
+import Title from "../components/form-component/Title";
+import Subtitle from "../components/form-component/SubTitle";
+import BtnGoogle from "../components/form-component/BtnGoogle";
+import "../index.css";
 import EyeOff from "../assets/mdi_eye-off.png";
 import IdnFlag from "../assets/idn-flag.png";
 import ArrowDown from "../assets/arrow-down.png";
@@ -56,7 +56,7 @@ const Register = () => {
     <>
       <Header />
       <div className="template d-flex justify-content-center align-items-center">
-        <div className="form_container p-4 my-4 rounded bg-white border">
+        <div className="form_container p-4 my-4 rounded bg-white border w-75">
           <Title title="Pendaftaran Akun" />
           <Subtitle subtitle="Yuk, daftarkan akunmu sekarang juga!" />
           <form id="register" name="register" onSubmit={handleRegister}>
@@ -142,7 +142,7 @@ const Register = () => {
                   name="phoneNumber"
                   id="phoneNumber"
                   value={phoneNumber}
-                  className="DM_Sans form-control border-0"
+                  className="DM_Sans form-control border"
                   onChange={(e) => setPhoneNumber(e.target.value)}
                 />
               </div>

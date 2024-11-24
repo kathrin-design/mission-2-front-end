@@ -4,9 +4,11 @@ const loginStore = create((set, get) => ({
   userName: "",
   email: "",
   password: "",
+  isLoggedIn: false,
   setUserName: (userName) => set({ userName }),
   setEmail: (email) => set({ email }),
   setPassword: (password) => set({ password }),
+  setLoginStatus: (status) => set({ isLoggedIn: status }),
   login: () => {
     const { userName, email, password } = get();
     const storedUser = localStorage.getItem("userData");
@@ -24,6 +26,7 @@ const loginStore = create((set, get) => ({
         password === storedPassword
       ) {
         localStorage.setItem("isLoggedIn", "true");
+        set({ isLoggedIn: true });
         return true;
       }
     }
@@ -35,6 +38,7 @@ const loginStore = create((set, get) => ({
       userName: "",
       email: "",
       password: "",
+      isLoggedIn: false,
     });
     localStorage.removeItem("isLoggedIn");
   },

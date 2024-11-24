@@ -3,7 +3,7 @@ import React from "react";
 const ClosingCard = () => {
   return (
     <div className="my-5 d-flex flex-column justify-content-center align-items-center">
-      <div className="closing w-100 px-1 mx-2 d-flex flex-column justify-content-center align-items-center rounded-3">
+      <div className="closing w-100 px-1 mx-2 d-flex flex-column justify-content-center align-items-center rounded-3 pb-2">
         <div className="w-md-50 px-2 py-4">
           <div className="d-flex flex-column justify-content-center align-items-center">
             <p className="text-secondary fs-6 fw-bold DM_Sans text-center">
